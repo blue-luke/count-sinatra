@@ -33,7 +33,7 @@ describe Counter do
     end
   end
 
-  describe '#time' do
+  describe '#last_updated' do
     it 'prints time of last update' do
       counter = Counter.new
       counter.decrement
