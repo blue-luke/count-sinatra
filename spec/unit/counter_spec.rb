@@ -25,11 +25,19 @@ describe Counter do
   end
 
   describe '#reset' do
-  it 'resets the counter' do
-    counter = Counter.new
-    counter.decrement
-    expect(counter.count).to eq -1
-    expect(counter.reset).to eq 0
+    it 'resets the counter' do
+      counter = Counter.new
+      counter.decrement
+      expect(counter.count).to eq -1
+      expect(counter.reset).to eq 0
+    end
   end
-end
+
+  describe '#time' do
+    it 'prints time of last update' do
+      counter = Counter.new
+      counter.decrement
+      expect(counter.last_updated).to eq Time.now.strftime("%H:%M")
+    end
+  end
 end
