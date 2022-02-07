@@ -10,5 +10,6 @@ feature "decrement the count" do
     click_button "Decrement"
     expect(page).to have_button('Decrement')
     expect(page).to have_content -1
+    click_button "Reset"
   end
 end
