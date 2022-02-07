@@ -9,6 +9,10 @@ class Counter
     @count += 1
   end
 
+  def decrement
+    @count -= 1
+  end
+
   def self.instance
     @counter ||= Counter.new
   end
